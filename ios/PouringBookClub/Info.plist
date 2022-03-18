@@ -36,7 +36,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -51,5 +51,20 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>robotobold.TTF</string>
+		<string>robotomedium.TTF</string>
+		<string>sweetgrend.OTF</string>
+		<string>Roboto-Bold.TTF</string>
+		<string>roboto_bold.TTF</string>
+		<string>roboto_medium.TTF</string>
+		<string>ROBOTO-BOLD.TTF</string>
+		<string>ROBOTO-LIGHT.TTF</string>
+		<string>ROBOTO-MEDIUM.TTF</string>
+		<string>robotolight.TTF</string>
+		<string>Roboto.TTF</string>
+		<string>GILSANUB.TTF</string>
+	</array>
 </dict>
 </plist>
