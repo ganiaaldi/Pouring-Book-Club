@@ -1,0 +1,32 @@
+{
+    "users": [
+        {
+          "username":"aldi",
+          "password":"1234",
+          "fullname":"Punya Aldi",
+          "path":"",
+          "id": 1
+        },
+        {
+            "username":"diona",
+            "password":"1234",
+            "fullname":"Diona Putri",
+            "path":"https://png.pngtree.com/png-vector/20190307/ourlarge/pngtree-vector-flower-icon-png-image_780470.jpg",
+            "id": 2
+        },
+        {
+            "username":"bayu",
+            "password":"1234",
+            "fullname":"Bayu Purnama",
+            "path":"https://1tb.favim.com/preview/8/814/8144/81440/8144021.jpg",
+            "id": 3
+          },
+          {
+            "username":"rudy",
+            "password":"1234",
+            "fullname":"Rudi Bonaparte",
+            "path":"https://iconape.com/wp-content/png_logo_vector/bird.png",
+            "id": 4
+          }
+    ]
+  }
