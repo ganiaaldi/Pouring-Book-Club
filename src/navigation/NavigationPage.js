@@ -18,7 +18,13 @@ const NavigationPage = () => {
             headerShown: false,
           }}
         />
-        <Stack.Screen name="Dashboard" component={Dashboard} />
+        <Stack.Screen
+          name="Dashboard"
+          component={Dashboard}
+          options={{
+            headerShown: false,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
