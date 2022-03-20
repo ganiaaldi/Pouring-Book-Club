@@ -1,6 +1,5 @@
 import {StyleSheet, Text, View, Image} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Homepage from './homepage/Homepage';
 import Memberlist from './memberlist/Memberlist';
@@ -12,23 +11,6 @@ import {home} from '../assets';
 const Tab = createBottomTabNavigator();
 
 const Dashboard = () => {
-  const [username, setUsername] = useState();
-
-  // Load data when the app starts
-  useEffect(() => {
-    const firstLoad = async () => {
-      try {
-        const savedNickname = await AsyncStorage.getItem('@username');
-        setUsername(savedNickname);
-        console.log('saved username2', savedNickname);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
-    firstLoad();
-  }, [username]);
-
   return (
     <Tab.Navigator
       initialRouteName="Profile"

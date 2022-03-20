@@ -4,7 +4,7 @@
           "username":"aldi",
           "password":"1234",
           "fullname":"Punya Aldi",
-          "path":"",
+          "path":"https://i.pinimg.com/736x/94/9e/ed/949eed75d15f30d00b1cfe05fc7059da.jpg",
           "id": 1
         },
         {
@@ -28,5 +28,61 @@
             "path":"https://iconape.com/wp-content/png_logo_vector/bird.png",
             "id": 4
           }
-    ]
+    ],
+    "transaction": [
+      {
+        "titleBook": "Laut Bercerita",
+        "type": "Novel",
+        "author": "Leila S. Chudori",
+        "cover":"https://cdnwpseller.gramedia.net/wp-content/uploads/2021/10/06103314/laut-bercerita.jpg",
+        "status": "Borrowed",
+        "userId":1,
+        "id": 1
+      },
+      {
+        "titleBook": "No Longer Human",
+        "type": "Novel",
+        "author": "Dazai Osamu",
+        "cover":"https://upload.wikimedia.org/wikipedia/id/1/18/No_Longer_Human_%28Osamu_Dazai_novel%29_cover.jpg",
+        "status": "Finish",
+        "userId":1,
+          "id": 2
+      },
+      {
+        "titleBook": "Laut Bercerita",
+        "type": "Novel",
+        "author": "Leila S. Chudori",
+        "cover":"https://cdnwpseller.gramedia.net/wp-content/uploads/2021/10/06103314/laut-bercerita.jpg",
+        "status": "Borrowed",
+        "userId":2,
+        "id": 3
+      },
+      {
+        "titleBook": "No Longer Human",
+        "type": "Novel",
+        "author": "Dazai Osamu",
+        "cover":"https://upload.wikimedia.org/wikipedia/id/1/18/No_Longer_Human_%28Osamu_Dazai_novel%29_cover.jpg",
+        "status": "Finish",
+        "userId":3,
+          "id": 4
+      },
+      {
+        "titleBook": "Goodnight Punpun Vol. 1",
+        "type": "Komik",
+        "author": "Inio Asano",
+        "cover":"https://images.tokopedia.net/img/cache/700/product-1/2019/10/4/72579307/72579307_7b3439ad-cb12-443b-a846-e19be790de37_674_977.jpg",
+        "status": "Borrowed",
+        "userId":1,
+          "id": 5
+      },
+      {
+        "titleBook": "Goodnight Punpun Vol. 2",
+        "type": "Komik",
+        "author": "Inio Asano",
+        "cover":"https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421586212/goodnight-punpun-vol-2-9781421586212_lg.jpg",
+        "status": "Borrowed",
+        "userId":1,
+          "id": 6
+      }
+  ]
   }

@@ -1,12 +1,9 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import TabViewNav from '../../navigation/TabViewNav';
 
 const Memberlist = () => {
-  return (
-    <View>
-      <Text>Memberlist</Text>
-    </View>
-  );
+  return <View />;
 };
 
 export default Memberlist;

@@ -14,13 +14,13 @@ import {icon} from '../../assets';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const LoginPage = ({route, navigation}) => {
-  const [username, setUsername] = useState();
+  const [idAnggota, setIdAnggota] = useState();
 
   // Create or Update nickname
-  const saveNickname = async () => {
+  const saveID = async () => {
     try {
-      console.log('cek username', username);
-      await AsyncStorage.setItem('@username', username);
+      console.log('cek idAnggota', idAnggota);
+      await AsyncStorage.setItem('@idAnggota', idAnggota);
       navigation.navigate('Dashboard');
     } catch (err) {
       console.log(err);
@@ -41,14 +41,15 @@ const LoginPage = ({route, navigation}) => {
           Login Member
         </Text>
         <View style={{alignItems: 'center'}}>
-          <TextInput placeholder="No. Anggota" style={styles.input} />
           <TextInput
-            placeholder="Username"
+            placeholder="No. Anggota"
             style={styles.input}
+            keyboardType="numeric"
             onChangeText={value => {
-              setUsername(value);
+              setIdAnggota(value);
             }}
           />
+          <TextInput placeholder="Username" style={styles.input} />
           <TextInput
             placeholder="Password"
             style={styles.input}
@@ -60,7 +61,7 @@ const LoginPage = ({route, navigation}) => {
           bgColor="white"
           textColors={colors.grayblack}
           // onPress={() => navigation.navigate('Dashboard')}
-          onPress={saveNickname}
+          onPress={saveID}
         />
         <Text
           style={{
