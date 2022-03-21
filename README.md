@@ -9,3 +9,4 @@ Feature use :
 5. Bottom Navigation
 6. Rest API with Axios
 7. TabLayout/ViewPager
+8. Redux

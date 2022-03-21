@@ -6,10 +6,12 @@ import {colors} from '../../utils/colors';
 import BookCard from '../../component/BookCard';
 import BookCardSquare from '../../component/BookCardSquare';
 import {FlatGrid} from 'react-native-super-grid';
+import {useDispatch, useSelector} from 'react-redux';
+import {setDetailPage} from '../../redux';
 
-const Homepage = () => {
+const Homepage = ({route, navigation}) => {
   const [book, setBook] = useState([]);
-
+  const dispatch = useDispatch();
   useEffect(() => {
     getData();
   }, []);
@@ -23,10 +25,11 @@ const Homepage = () => {
       .catch(err => console.log('err', err));
   };
 
-  // const shuffleBook = () => {
-  //   const newIndex = Math.floor(Math.random() * book.length);
-  //   returnbook[newIndex]);
-  // };
+  const selectItem = (item, input) => {
+    console.log('item', item);
+    dispatch(setDetailPage(item));
+    navigation.navigate('DetailBook');
+  };
 
   return (
     <View style={{flex: 1, paddingHorizontal: 10}}>
@@ -52,7 +55,7 @@ const Homepage = () => {
                   type={book.type}
                   author={book.author}
                   path={book.cover}
-                  bgColor={colors.blue}
+                  onPress={() => selectItem(book)}
                 />
               );
             })}
@@ -73,7 +76,7 @@ const Homepage = () => {
             type={item.type}
             author={item.author}
             path={item.cover}
-            bgColor={item.blue}
+            onPress={() => selectItem(item)}
           />
         )}
       />
