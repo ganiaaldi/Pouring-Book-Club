@@ -1,8 +1,8 @@
 import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
-import {colors} from '../../utils/colors';
+import {colors} from '../utils/colors';
 
-const ItemTransaction = ({
+const BookCardSquare = ({
   tittlebook,
   type,
   path,
@@ -12,32 +12,33 @@ const ItemTransaction = ({
   bgColor,
 }) => {
   return (
-    <View style={{...styles.itemContainer, backgroundColor: bgColor}}>
+    <View style={styles.itemContainer}>
       <TouchableOpacity onPress={onPress}>
         <Image source={{uri: path}} style={styles.avatar} />
       </TouchableOpacity>
       <View style={styles.descContainer}>
         <Text style={styles.tittlebook}>{tittlebook}</Text>
-        <Text style={styles.type}>{author}</Text>
-        <Text style={styles.author}>{type}</Text>
       </View>
     </View>
   );
 };
 
-export default ItemTransaction;
+export default BookCardSquare;
 
 const styles = StyleSheet.create({
   avatar: {
-    width: 100,
-    height: 100,
-    borderRadius: 100,
+    width: 140,
+    height: 180,
+    borderRadius: 20,
   },
   itemContainer: {
-    flexDirection: 'row',
+    width: 170,
+    height: 300,
+    flexDirection: 'column',
     marginVertical: 10,
-    backgroundColor: colors.darkpink,
-    borderRadius: 50,
+    marginEnd: 20,
+    backgroundColor: 'white',
+    borderRadius: 20,
     padding: 20,
   },
   descContainer: {
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flex: 1,
   },
-  tittlebook: {fontSize: 18, fontWeight: 'bold', color: 'white'},
-  type: {fontSize: 14, color: 'white'},
+  tittlebook: {fontSize: 18, fontWeight: 'bold', color: colors.grayblack},
+  type: {fontSize: 14, color: colors.grayblack},
   author: {fontSize: 14, color: 'gray'},
 });

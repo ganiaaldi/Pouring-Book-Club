@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import ItemTransaction from './ItemTransaction';
 import Axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {colors} from '../../utils/colors';
 
 const BorrowPage = () => {
   const [transaction, setTransaction] = useState([]);
@@ -34,6 +35,7 @@ const BorrowPage = () => {
                 type={transaction.type}
                 author={transaction.author}
                 path={transaction.cover}
+                bgColor={colors.darkpink}
               />
             );
           })}

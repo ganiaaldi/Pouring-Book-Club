@@ -19,7 +19,7 @@ const ProfilePage = ({route, navigation}) => {
     const savedID = await AsyncStorage.getItem('@idAnggota');
     Axios.get(`http://192.168.42.192:8081/users/${savedID}`)
       .then(res => {
-        console.log('res get data', res.data);
+        console.log('res get profile', res.data);
         setUser(res.data);
       })
       .catch(err => console.log('err', err));

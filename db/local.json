@@ -84,5 +84,107 @@
         "userId":1,
           "id": 6
       }
-  ]
+  ],
+  "book": [
+    {
+      "titleBook": "Laut Bercerita",
+      "type": "Novel",
+      "author": "Leila S. Chudori",
+      "cover":"https://cdnwpseller.gramedia.net/wp-content/uploads/2021/10/06103314/laut-bercerita.jpg",
+      "sinopsis":"Di sebuah senja, di sebuah rumah susun di Jakarta, mahasiswa bernama Biru Laut disergap empat lelaki tak dikenal. Bersama kawan-kawannya, Daniel Tumbuan, Sunu Dyantoro, Alex Perazon, dia dibawa ke sebuah tempat yang tak dikenal. ",
+      "publisher":"KPG (Kepustakaan Populer Gramedia)",
+      "pages": 379,
+      "id": 1
+    },
+    {
+      "titleBook": "No Longer Human",
+      "type": "Novel",
+      "author": "Dazai Osamu",
+      "cover":"https://upload.wikimedia.org/wikipedia/id/1/18/No_Longer_Human_%28Osamu_Dazai_novel%29_cover.jpg",
+      "sinopsis":"No Longer Human diceritakan dalam bentuk buku catatan yang ditinggalkan oleh Ōba Yozo ( 大 庭 葉 蔵 ) , seorang lelaki bermasalah yang tidak mampu mengungkapkan jati dirinya kepada orang lain, dan yang, sebaliknya, mempertahankan fasad kegembiraan kosong.",
+      "publisher":"Chikuma Shobō",
+      "pages" :271, 
+      "id": 2
+    },
+    {
+      "titleBook": "Goodnight Punpun Vol. 1",
+      "type": "Komik",
+      "author": "Inio Asano",
+      "cover":"https://images.tokopedia.net/img/cache/700/product-1/2019/10/4/72579307/72579307_7b3439ad-cb12-443b-a846-e19be790de37_674_977.jpg",
+      "sinopsis":"Goodnight Punpun (おやすみプンプン Oyasumi Punpun) adalah sebuah manga Jepang yang ditulis dan diilustrasikan olehy Inio Asano tentang Onodera Punpun, seorang bocah normal yang digambarkan dalam bentuk seekor burung.",
+      "publisher":"Weekly Young Sunday",
+      "pages":120, 
+      "id": 3
+    },
+    {
+      "titleBook": "Goodnight Punpun Vol. 2",
+      "type": "Komik",
+      "author": "Inio Asano",
+      "cover":"https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421586212/goodnight-punpun-vol-2-9781421586212_lg.jpg",
+      "sinopsis":"Goodnight Punpun (おやすみプンプン Oyasumi Punpun) adalah sebuah manga Jepang yang ditulis dan diilustrasikan olehy Inio Asano tentang Onodera Punpun, seorang bocah normal yang digambarkan dalam bentuk seekor burung.",
+      "publisher":"Weekly Young Sunday",
+      "pages":220,   
+      "id": 4
+    },
+    {
+      "titleBook": "Doraemon : Nobita Di Dunia Mainan",
+      "type": "Komik",
+      "author": "Fujiko F Fujio",
+      "cover":"https://www.bukukita.com/babacms/displaybuku/94347_f.jpg",
+      "sinopsis":"Suneo bercerita tentang ranch kuda miliknya berpemandangan indah dan udara segar. Setelah mendengar cerita itu Nobita jadi bilang kalau ia pun memiliki tempat seperti itu. Sesampai di rumah Nobita merengek pada Doraemon untuk menemukan tempat seperti ranch milik Suneo. Doraemon kesal mendengar rengekan Nobita, kemudian ia pergi ke abad 22 untuk ikut undian. Akankah Doraemon mengabulkan permintaan Nobita? ",
+      "publisher":"PT. Elex Media Komputindo",
+      "pages": 174,
+      "id": 5
+    },
+    {
+      "titleBook": "Sepasang Kaos Kaki Hitam",
+      "type": "Novel",
+      "author": "Ariadi Ginting",
+      "cover":"https://assets-a2.kompasiana.com/items/album/2015/10/29/sk2h-cover-5631cc511397734a07e4e7e8.jpg?t=o&v=780",
+      "sinopsis":"Awalnya, Ari penasaran dengan gadis aneh itu. Di kota sepanas Karawang, gadis itu memakai kaus kaki hitam. Suatu hari, suara gaduh terdengar dari kamar di seberang itu. Dari situlah rasa penasarannya mulai terjawab satu per satu. Lambat laun, Ari akrab dengan Meva, gadis aneh itu.",
+      "publisher":"PT. Elex Media Komputindo",
+      "pages": 248,
+      "id": 6
+    },
+    {
+      "titleBook": "Doraemon : Nobita dan Kereta Api Ekspres",
+      "type": "Komik",
+      "author": "Fujiko F Fujio",
+      "cover":"https://www.bukukita.com/babacms/displaybuku/85604_f.jpg",
+      "sinopsis":"Suneo bercerita tentang ranch kuda miliknya berpemandangan indah dan udara segar. Setelah mendengar cerita itu Nobita jadi bilang kalau ia pun memiliki tempat seperti itu. Sesampai di rumah Nobita merengek pada Doraemon untuk menemukan tempat seperti ranch milik Suneo. Doraemon kesal mendengar rengekan Nobita, kemudian ia pergi ke abad 22 untuk ikut undian. Akankah Doraemon mengabulkan permintaan Nobita? ",
+      "publisher":"PT. Elex Media Komputindo",
+      "pages": 160,
+      "id": 7
+    },
+    {
+      "titleBook": "Doraemon : Nobita di Dunia Setan",
+      "type": "Komik",
+      "author": "Fujiko F Fujio",
+      "cover":"https://www.bukukita.com/babacms/displaybuku/68136_f.jpg",
+      "sinopsis":"Di sana ada sebuah penginapan bernama Hotel Blikin yang dikelola robot-robot! Nobita dan Doraemon pun menginap di sana, tapi anehnya tak ada seorang pun tamu selain mereka. Keanehan-keanehan pun mulai terjadi dan tiba-tiba hotel tersebut diserang!! Misteri apa yang sebenarnya ada di sana!?",
+      "publisher":"PT. Elex Media Komputindo",
+      "pages": 188,
+      "id": 8
+    },
+    {
+      "titleBook": "Doraemon : Nobita dan Labirin Timah",
+      "type": "Komik",
+      "author": "Fujiko F Fujio",
+      "cover":"https://www.bukukita.com/babacms/displaybuku/61716_f.jpg",
+      "sinopsis":"Nobita yang bosan dengan dunia nyata mengharapkan dunia ajaib di mana dia bisa menggunakan kekuatan sihir untuk mengatasi bermacam-macam persoalan. Dengan bantuan kotak pengandaian milik Doraemon, Nobita berhasil mewujudkan dunia sihir!",
+      "publisher":"PT. Elex Media Komputindo",
+      "pages": 252,
+      "id": 9
+    },
+    {
+      "titleBook": "Doraemon : Nobita & Kerajaan Robot",
+      "type": "Komik",
+      "author": "Fujiko F Fujio",
+      "cover":"https://www.bukukita.com/babacms/displaybuku/38826_f.jpg",
+      "sinopsis":"Karena Suneo membangga-banggakan robot binatang peliharaannya, Nobita pun jadi sangat menginginkannya.Nobita lalu memesan banyak robot dari alat yang berasal dari kantong cadangan Doraemon.Di antara robot-robot itu terdapat seorang robot remaja bernama Poko yang tersesat di ruang ultra dimensi.",
+      "publisher":"PT. Elex Media Komputindo",
+      "pages": 252,
+      "id": 10
+    }
+]
   }
