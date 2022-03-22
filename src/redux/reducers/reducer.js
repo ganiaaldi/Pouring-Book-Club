@@ -19,8 +19,22 @@ const detailReducer = (state = initialStateDetail, action) => {
   }
 };
 
+const initialTransaction = {
+  isBorrowed: 0,
+};
+
+const transactionReducer = (state = initialTransaction, action) => {
+  switch (action.type) {
+    case 'SET_RETURN_BOOK':
+      return action.inputValue;
+    default:
+      return state;
+  }
+};
+
 const reducer = combineReducers({
   detailReducer,
+  transactionReducer,
 });
 
 export default reducer;

@@ -11,6 +11,10 @@ import {home} from '../assets';
 const Tab = createBottomTabNavigator();
 
 const Dashboard = () => {
+  useEffect(() => {
+    console.log('dashboard');
+  }, []);
+
   return (
     <Tab.Navigator
       initialRouteName="Profile"

@@ -4,13 +4,33 @@ import {useDispatch, useSelector} from 'react-redux';
 import styles from '../../utils/styles';
 import {CustomButton} from '../../component';
 import {colors} from './../../utils/colors';
+import Axios from 'axios';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const DetailBook = () => {
+const DetailBook = ({route, navigation}) => {
   const detailReducer = useSelector(state => state.detailReducer);
 
   useEffect(() => {
-    console.log('detail data', detailReducer.author);
+    console.log('detail data', detailReducer);
   }, [detailReducer]);
+
+  const borrowBook = async () => {
+    const savedID = await AsyncStorage.getItem('@idAnggota');
+    console.log('saved ID', savedID);
+    Axios.post('http://192.168.42.192:8081/transaction', {
+      titleBook: detailReducer.titleBook,
+      type: detailReducer.type,
+      author: detailReducer.author,
+      cover: detailReducer.cover,
+      status: 'Borrowed',
+      userId: parseInt(savedID),
+    })
+      .then(res => {
+        console.log('res', res);
+        navigation.push('Dashboard');
+      })
+      .catch(err => console.log('err', err));
+  };
 
   return (
     <View style={{flex: 1, padding: 10}}>
@@ -77,8 +97,7 @@ const DetailBook = () => {
           bgColor={colors.pink}
           textColors="white"
           border="white"
-          // onPress={() => navigation.navigate('Dashboard')}
-          // onPress={saveID}
+          onPress={borrowBook}
         />
       </View>
     </View>

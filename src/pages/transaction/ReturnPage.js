@@ -1,16 +1,20 @@
-import {StyleSheet, Text, View, ScrollView} from 'react-native';
+import {StyleSheet, Text, View, ScrollView, Alert} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import ItemTransaction from './ItemTransaction';
 import Axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {colors} from '../../utils/colors';
+import {useSelector, useDispatch} from 'react-redux';
+import {setReturnBook} from '../../redux';
 
 const ReturnPage = () => {
   const [transaction, setTransaction] = useState([]);
+  const dispatch = useDispatch();
+  const transactionReducer = useSelector(state => state.transactionReducer);
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [transactionReducer]);
 
   const getData = async () => {
     const savedID = await AsyncStorage.getItem('@idAnggota');
@@ -18,10 +22,37 @@ const ReturnPage = () => {
       `http://192.168.42.192:8081/transaction?userId=${savedID}&status=Finish`,
     )
       .then(res => {
-        console.log('res get data', res.data);
+        console.log('res return book', res.data);
         setTransaction(res.data);
       })
       .catch(err => console.log('err', err));
+  };
+
+  const deleteBook = async item => {
+    console.log('item return book', item);
+    Alert.alert('Delete', 'Are you sure to delete this book from list?', [
+      // The "Yes" button
+      {
+        text: 'Yes',
+        onPress: () => {
+          Axios.delete(`http://192.168.42.192:8081/transaction/${item.id}`)
+            .then(res => {
+              console.log('res', res);
+              dispatch(
+                setReturnBook({
+                  isBorrowed: transactionReducer.isBorrowed + 1,
+                }),
+              );
+            })
+            .catch(err => console.log('err', err));
+        },
+      },
+      // The "No" button
+      // Does nothing but dismiss the dialog when tapped
+      {
+        text: 'No',
+      },
+    ]);
   };
 
   return (
@@ -37,6 +68,7 @@ const ReturnPage = () => {
                 author={transaction.author}
                 path={transaction.cover}
                 bgColor={colors.darkpink}
+                onPress={() => deleteBook(transaction)}
               />
             );
           })}
