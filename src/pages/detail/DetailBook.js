@@ -15,21 +15,22 @@ const DetailBook = ({route, navigation}) => {
   }, [detailReducer]);
 
   const borrowBook = async () => {
-    const savedID = await AsyncStorage.getItem('@idAnggota');
-    console.log('saved ID', savedID);
-    Axios.post('http://192.168.42.192:8081/transaction', {
-      titleBook: detailReducer.titleBook,
-      type: detailReducer.type,
-      author: detailReducer.author,
-      cover: detailReducer.cover,
-      status: 'Borrowed',
-      userId: parseInt(savedID),
-    })
-      .then(res => {
-        console.log('res', res);
-        navigation.push('Dashboard');
-      })
-      .catch(err => console.log('err', err));
+    // const savedID = await AsyncStorage.getItem('@idAnggota');
+    // console.log('saved ID', savedID);
+    // Axios.post('http://192.168.42.192:8081/transaction', {
+    //   titleBook: detailReducer.titleBook,
+    //   type: detailReducer.type,
+    //   author: detailReducer.author,
+    //   cover: detailReducer.cover,
+    //   status: 'Borrowed',
+    //   userId: parseInt(savedID),
+    // })
+    //   .then(res => {
+    //     console.log('res', res);
+    //     navigation.push('Dashboard');
+    //   })
+    //   .catch(err => console.log('err', err));
+    navigation.navigate('SignBook');
   };
 
   return (
