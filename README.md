@@ -10,3 +10,5 @@ Feature use :
 6. Rest API with Axios
 7. TabLayout/ViewPager
 8. Redux
+9. Sign
+10. Location (Get Coordinate)

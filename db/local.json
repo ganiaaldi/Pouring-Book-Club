@@ -173,6 +173,33 @@
       "status": "Finish",
       "userId": 1,
       "id": 18
+    },
+    {
+      "titleBook": "Doraemon : Nobita & Kerajaan Robot",
+      "type": "Komik",
+      "author": "Fujiko F Fujio",
+      "cover": "https://www.bukukita.com/babacms/displaybuku/38826_f.jpg",
+      "status": "Borrowed",
+      "userId": 1,
+      "id": 19
+    },
+    {
+      "titleBook": "Laut Bercerita",
+      "type": "Novel",
+      "author": "Leila S. Chudori",
+      "cover": "https://cdnwpseller.gramedia.net/wp-content/uploads/2021/10/06103314/laut-bercerita.jpg",
+      "status": "Borrowed",
+      "userId": 1,
+      "id": 20
+    },
+    {
+      "titleBook": "Goodnight Punpun Vol. 2",
+      "type": "Komik",
+      "author": "Inio Asano",
+      "cover": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421586212/goodnight-punpun-vol-2-9781421586212_lg.jpg",
+      "status": "Borrowed",
+      "userId": 1,
+      "id": 21
     }
   ],
   "book": [

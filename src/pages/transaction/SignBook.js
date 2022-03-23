@@ -1,16 +1,43 @@
 import {ScrollView, Text, View} from 'react-native';
-import React, {useRef} from 'react';
+import React, {useRef, useEffect} from 'react';
 import SignPage from '../../component/SignPage';
 import styles from '../../utils/styles';
 import CustomButton from './../../component/Button';
 import {colors} from './../../utils/colors';
+import LocationPage from './../../component/LocationPage';
+import {useSelector, useDispatch} from 'react-redux';
+import Axios from 'axios';
+import {clearFormPath} from '../../redux';
 
-const SignBook = () => {
+const SignBook = ({route, navigation}) => {
   const signRef = useRef();
+  const locationRef = useRef();
+  const formPath = useSelector(state => state.formPath);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    console.log('cek sign formpath', formPath);
+    if (
+      formPath.location.latitude === '' ||
+      formPath.location.longitude === '' ||
+      formPath.photo === ''
+    ) {
+      console.log('formPath null', formPath);
+    } else {
+      console.log('formPath not null', formPath);
+      saveSign();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [formPath]);
 
   const submitSign = async () => {
-    let path = signRef.current.handleOK();
-    console.log('signbook', path);
+    signRef.current.handleOK();
+    locationRef.current.submit();
+  };
+
+  const saveSign = () => {
+    console.log('formpath save', formPath);
+    dispatch(clearFormPath());
   };
 
   return (
@@ -25,7 +52,7 @@ const SignBook = () => {
           }
         </Text>
         <SignPage ref={signRef} />
-
+        <LocationPage ref={locationRef} />
         <View style={{alignItems: 'center', marginTop: 20}}>
           <CustomButton
             buttonText="Complete Sign"
@@ -33,6 +60,13 @@ const SignBook = () => {
             textColors="white"
             border="white"
             onPress={() => submitSign()}
+          />
+          <CustomButton
+            buttonText="Go To Dashboard"
+            bgColor={colors.pink}
+            textColors="white"
+            border="white"
+            onPress={() => navigation.push('Dashboard')}
           />
         </View>
       </ScrollView>

@@ -32,9 +32,42 @@ const transactionReducer = (state = initialTransaction, action) => {
   }
 };
 
+const initialPath = {
+  location: {
+    latitude: '',
+    longitude: '',
+  },
+  photo: '',
+};
+
+const formPath = (state = initialPath, action) => {
+  switch (action.type) {
+    case 'SET_PATH':
+      return {
+        ...state,
+        location: {
+          ...state.location,
+          [action.inputType]: action.inputValue,
+        },
+      };
+    case 'SET_PATH_IMAGE':
+      return {
+        ...state,
+        photo: action.inputValue,
+      };
+    case 'CLEAR_FORM_PATH':
+      return {
+        ...(state = initialPath),
+      };
+    default:
+      return state;
+  }
+};
+
 const reducer = combineReducers({
   detailReducer,
   transactionReducer,
+  formPath,
 });
 
 export default reducer;

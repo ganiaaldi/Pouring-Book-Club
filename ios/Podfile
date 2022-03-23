@@ -12,6 +12,8 @@ target 'PouringBookClub' do
     :hermes_enabled => true
   )
 
+  pod 'react-native-location', :path => '../node_modules/react-native-location'
+
   target 'PouringBookClubTests' do
     inherit! :complete
     # Pods for testing

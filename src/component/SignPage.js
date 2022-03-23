@@ -18,17 +18,15 @@ import {
 
 import RNSketchCanvas from '@terrylinla/react-native-sketch-canvas';
 import {useSelector, useDispatch} from 'react-redux';
-import {setPathImage} from './../redux/action';
-import {clear} from 'react-native/Libraries/LogBox/Data/LogBoxData';
+import {setPathImage} from '../redux';
 
 const SignPage = (props, ref) => {
-  //   const formPath = useSelector(state => state.formPath);
-  //   const dispatch = useDispatch();
+  const formPath = useSelector(state => state.formPath);
+  const dispatch = useDispatch();
   const reff = useRef();
   const [path, setPath] = useState('');
 
   useEffect(() => {
-    // console.log('get path signed', formPath);
     console.log('sign path', path);
   }, [path]);
 
@@ -72,7 +70,6 @@ const SignPage = (props, ref) => {
         </View>
         <RNSketchCanvas
           ref={reff}
-          // saveComponent={handleOK}
           containerStyle={{
             backgroundColor: 'transparent',
             flex: 1,
@@ -83,63 +80,6 @@ const SignPage = (props, ref) => {
           }}
           defaultStrokeIndex={0}
           defaultStrokeWidth={5}
-          // closeComponent={
-          //   <View style={styles.functionButton}>
-          //     <Text style={{color: 'white'}}>Close</Text>
-          //   </View>
-          // }
-          // undoComponent={
-          //   <View style={styles.functionButton}>
-          //     <Text style={{color: 'white'}}>Undo</Text>
-          //   </View>
-          // }
-
-          //   clearComponent={
-          //     <View style={styles.functionButton}>
-          //       <Text style={{color: 'white'}}>Clear</Text>
-          //     </View>
-          //   }
-          // eraseComponent={
-          //   <View style={styles.functionButton}>
-          //     <Text style={{color: 'white'}}>Eraser</Text>
-          //   </View>
-          // }
-          // strokeComponent={color => (
-          //   <View
-          //     style={[{backgroundColor: color}, styles.strokeColorButton]}
-          //   />
-          // )}
-          // strokeSelectedComponent={(color, index, changed) => {
-          //   return (
-          //     <View
-          //       style={[
-          //         {backgroundColor: color, borderWidth: 2},
-          //         styles.strokeColorButton,
-          //       ]}
-          //     />
-          //   );
-          // }}
-          // strokeWidthComponent={w => {
-          //   return (
-          //     <View style={styles.strokeWidthButton}>
-          //       <View
-          //         style={{
-          //           backgroundColor: 'white',
-          //           marginHorizontal: 2.5,
-          //           width: Math.sqrt(w / 3) * 10,
-          //           height: Math.sqrt(w / 3) * 10,
-          //           borderRadius: (Math.sqrt(w / 3) * 10) / 2,
-          //         }}
-          //       />
-          //     </View>
-          //   );
-          // }}
-          //   saveComponent={
-          //     // handleOK
-          //     <View style={styles.functionButton}>
-          //       <Text style={{color: 'white'}}>Save</Text>
-          //     </View>
-          //   }
           savePreference={() => {
             return {
               folder: 'PouringBookClub',
@@ -159,15 +99,72 @@ const SignPage = (props, ref) => {
               success ? 'Image saved!' : 'Failed to save image!',
               path,
             );
-            // dispatch(setPathImage(path));
+            dispatch(setPathImage(path));
           }}
           onPathsChange={pathsCount => {
             console.log('pathsCount', pathsCount);
           }}
+          /* Function Button in canvas
+          closeComponent={
+            <View style={styles.functionButton}>
+              <Text style={{color: 'white'}}>Close</Text>
+            </View>
+          }
+          undoComponent={
+            <View style={styles.functionButton}>
+              <Text style={{color: 'white'}}>Undo</Text>
+            </View>
+          }
+
+            clearComponent={
+              <View style={styles.functionButton}>
+                <Text style={{color: 'white'}}>Clear</Text>
+              </View>
+            }
+          eraseComponent={
+            <View style={styles.functionButton}>
+              <Text style={{color: 'white'}}>Eraser</Text>
+            </View>
+          }
+          strokeComponent={color => (
+            <View
+              style={[{backgroundColor: color}, styles.strokeColorButton]}
+            />
+          )}
+          strokeSelectedComponent={(color, index, changed) => {
+            return (
+              <View
+                style={[
+                  {backgroundColor: color, borderWidth: 2},
+                  styles.strokeColorButton,
+                ]}
+              />
+            );
+          }}
+          strokeWidthComponent={w => {
+            return (
+              <View style={styles.strokeWidthButton}>
+                <View
+                  style={{
+                    backgroundColor: 'white',
+                    marginHorizontal: 2.5,
+                    width: Math.sqrt(w / 3) * 10,
+                    height: Math.sqrt(w / 3) * 10,
+                    borderRadius: (Math.sqrt(w / 3) * 10) / 2,
+                  }}
+                />
+              </View>
+            );
+          }}
+            saveComponent={
+              // handleOK
+              <View style={styles.functionButton}>
+                <Text style={{color: 'white'}}>Save</Text>
+              </View>
+            }
+            */
         />
       </View>
-      {/* <GetLocation />
-        <Button title="Confirm" onPress={handleOK} /> */}
       <Text>Path : {path}</Text>
     </View>
   );
