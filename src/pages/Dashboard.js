@@ -1,12 +1,10 @@
-import {StyleSheet, Text, View, Image} from 'react-native';
-import React, {useEffect, useState} from 'react';
+import {StyleSheet, Image} from 'react-native';
+import React, {useEffect} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Homepage from './homepage/Homepage';
 import Memberlist from './memberlist/Memberlist';
 import ProfilePage from './profile/ProfilePage';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {colors} from '../utils/colors';
-import {home} from '../assets';
 
 const Tab = createBottomTabNavigator();
 

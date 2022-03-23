@@ -38,4 +38,13 @@ export default StyleSheet.create({
     color: 'white',
     fontSize: 16,
   },
+  input: {
+    borderWidth: 1,
+    marginBottom: 10,
+    borderRadius: 20,
+    paddingHorizontal: 15,
+    backgroundColor: 'white',
+    width: 320,
+    borderColor: colors.grayblack,
+  },
 });

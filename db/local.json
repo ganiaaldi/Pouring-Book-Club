@@ -200,6 +200,15 @@
       "status": "Borrowed",
       "userId": 1,
       "id": 21
+    },
+    {
+      "titleBook": "Laut Bercerita",
+      "type": "Novel",
+      "author": "Leila S. Chudori",
+      "cover": "https://cdnwpseller.gramedia.net/wp-content/uploads/2021/10/06103314/laut-bercerita.jpg",
+      "status": "Borrowed",
+      "userId": 1,
+      "id": 22
     }
   ],
   "book": [

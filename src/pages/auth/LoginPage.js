@@ -12,6 +12,7 @@ import {CustomButton} from '../../component';
 import {colors} from '../../utils/colors';
 import {icon} from '../../assets';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import stylesReus from '../../utils/styles';
 
 const LoginPage = ({route, navigation}) => {
   const [idAnggota, setIdAnggota] = useState();
@@ -43,16 +44,16 @@ const LoginPage = ({route, navigation}) => {
         <View style={{alignItems: 'center'}}>
           <TextInput
             placeholder="No. Anggota"
-            style={styles.input}
+            style={stylesReus.input}
             keyboardType="numeric"
             onChangeText={value => {
               setIdAnggota(value);
             }}
           />
-          <TextInput placeholder="Username" style={styles.input} />
+          <TextInput placeholder="Username" style={stylesReus.input} />
           <TextInput
             placeholder="Password"
-            style={styles.input}
+            style={stylesReus.input}
             secureTextEntry={true}
           />
         </View>
@@ -98,14 +99,5 @@ const styles = StyleSheet.create({
   icon: {
     width: 300,
     height: 300,
-  },
-  input: {
-    borderWidth: 1,
-    marginBottom: 10,
-    borderRadius: 20,
-    paddingHorizontal: 15,
-    backgroundColor: 'white',
-    width: 320,
-    borderColor: colors.grayblack,
   },
 });
