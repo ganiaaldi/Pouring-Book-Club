@@ -12,3 +12,5 @@ Feature use :
 8. Redux
 9. Sign
 10. Location (Get Coordinate)
+11. Search Data
+12. Filtering Data

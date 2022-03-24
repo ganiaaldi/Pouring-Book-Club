@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, ScrollView, TextInput} from 'react-native';
+import {Image, Text, View, ScrollView, TextInput} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
 import styles from '../../utils/styles';
@@ -8,6 +8,8 @@ import BookCardSquare from '../../component/BookCardSquare';
 import {FlatGrid} from 'react-native-super-grid';
 import {useDispatch, useSelector} from 'react-redux';
 import {setDetailPage} from '../../redux';
+import SelectedChips from './../../component/SelectedChips';
+import {searchIcon} from '../../assets';
 
 const Homepage = ({route, navigation}) => {
   const [search, setSearch] = useState('');
@@ -70,6 +72,22 @@ const Homepage = ({route, navigation}) => {
     }
   };
 
+  const chipsFilterFunction = text => {
+    // Check if searched text is not blank
+    if (text) {
+      // Inserted text is not blank
+      const newData = book.filter(function (item) {
+        const itemData = item.type ? item.type.toUpperCase() : ''.toUpperCase();
+        const textData = text.toUpperCase();
+        return itemData.indexOf(textData) > -1;
+      });
+      setFilterBook(newData);
+    } else {
+      // Inserted text is blank
+      setFilterBook(book);
+    }
+  };
+
   return (
     <View style={{flex: 1, paddingHorizontal: 10}}>
       <View>
@@ -102,12 +120,29 @@ const Homepage = ({route, navigation}) => {
         </ScrollView>
       </View>
       <Text style={{...styles.titleBoldDark, marginTop: 20}}>List Books</Text>
-      <TextInput
-        style={{...styles.input, width: '100%', marginTop: 10}}
-        onChangeText={text => searchFilterFunction(text)}
-        value={search}
-        underlineColorAndroid="transparent"
-        placeholder="Search Book"
+      <View>
+        <TextInput
+          style={{...styles.input, width: '100%', marginTop: 10}}
+          onChangeText={text => searchFilterFunction(text)}
+          value={search}
+          underlineColorAndroid="transparent"
+          placeholder="Search Book"
+        />
+        <Image
+          source={searchIcon}
+          style={{
+            width: 30,
+            height: 30,
+            position: 'absolute',
+            right: 20,
+            top: 20,
+          }}
+        />
+      </View>
+      <SelectedChips
+        initialChips={['Novel', 'Komik']}
+        onChangeChips={chips => chipsFilterFunction(chips[0])}
+        alertRequired={false}
       />
       <FlatGrid
         itemDimension={130}
