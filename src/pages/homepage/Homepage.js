@@ -1,4 +1,11 @@
-import {Image, Text, View, ScrollView, TextInput} from 'react-native';
+import {
+  Image,
+  Text,
+  View,
+  ScrollView,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
 import styles from '../../utils/styles';
@@ -10,12 +17,15 @@ import {useDispatch, useSelector} from 'react-redux';
 import {setDetailPage} from '../../redux';
 import SelectedChips from './../../component/SelectedChips';
 import {searchIcon} from '../../assets';
+import fabList from './../../component/FloatingActionButton';
+import {FloatingAction} from 'react-native-floating-action';
 
 const Homepage = ({route, navigation}) => {
   const [search, setSearch] = useState('');
   const [filterBook, setFilterBook] = useState([]);
   const [typeBook, setTypeBook] = useState([]);
   const [book, setBook] = useState([]);
+  const [sortText, setSortText] = useState('ID');
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -72,19 +82,36 @@ const Homepage = ({route, navigation}) => {
     }
   };
 
-  const chipsFilterFunction = text => {
-    // Check if searched text is not blank
-    if (text) {
+  const chipsFilterFunction = chips => {
+    // Check if searched chips is not blank
+    if (chips) {
       // Inserted text is not blank
       const newData = book.filter(function (item) {
         const itemData = item.type ? item.type.toUpperCase() : ''.toUpperCase();
-        const textData = text.toUpperCase();
+        const textData = chips.toUpperCase();
         return itemData.indexOf(textData) > -1;
       });
       setFilterBook(newData);
     } else {
-      // Inserted text is blank
+      // Inserted chips is blank
       setFilterBook(book);
+    }
+  };
+
+  const selectFab = item => {
+    console.log('item fab', item);
+  };
+
+  const sortData = () => {
+    if (sortText === 'A-Z') {
+      setSortText('Z-A');
+      filterBook.sort((a, b) => b.titleBook.localeCompare(a.titleBook));
+    } else if (sortText === 'Z-A') {
+      setSortText('ID');
+      filterBook.sort((a, b) => a.id - b.id);
+    } else {
+      setSortText('A-Z');
+      filterBook.sort((a, b) => a.titleBook.localeCompare(b.titleBook));
     }
   };
 
@@ -139,11 +166,34 @@ const Homepage = ({route, navigation}) => {
           }}
         />
       </View>
-      <SelectedChips
-        initialChips={['Novel', 'Komik']}
-        onChangeChips={chips => chipsFilterFunction(chips[0])}
-        alertRequired={false}
-      />
+      <View style={{flexDirection: 'row'}}>
+        <View style={{flex: 9}}>
+          <SelectedChips
+            initialChips={['Novel', 'Komik']}
+            onChangeChips={chips => chipsFilterFunction(chips[0])}
+            alertRequired={false}
+          />
+        </View>
+        <TouchableOpacity
+          onPress={sortData}
+          style={{
+            height: 30,
+            padding: 5,
+            borderRadius: 5,
+            borderWidth: 1,
+            flex: 1,
+            marginTop: 10,
+            backgroundColor: 'white',
+          }}>
+          <Text
+            style={{
+              textAlign: 'center',
+              fontWeight: 'bold',
+            }}>
+            {sortText}
+          </Text>
+        </TouchableOpacity>
+      </View>
       <FlatGrid
         itemDimension={130}
         data={filterBook}
@@ -160,6 +210,13 @@ const Homepage = ({route, navigation}) => {
             onPress={() => selectItem(item)}
           />
         )}
+      />
+      <FloatingAction
+        actions={fabList}
+        color={colors.pink}
+        onPressItem={item => {
+          selectFab(item);
+        }}
       />
     </View>
   );
