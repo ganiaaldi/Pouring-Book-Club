@@ -100,6 +100,13 @@ const DetailBook = ({route, navigation}) => {
           border="white"
           onPress={borrowBook}
         />
+        <CustomButton
+          buttonText="Test Page"
+          bgColor={colors.pink}
+          textColors="white"
+          border="white"
+          onPress={() => navigation.navigate('FormProgress')}
+        />
       </View>
     </View>
   );

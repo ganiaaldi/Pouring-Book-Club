@@ -10,6 +10,7 @@ import {store} from '../redux';
 import DetailBook from './../pages/detail/DetailBook';
 import SignBook from './../pages/transaction/SignBook';
 import ScanScreen from './../component/ScanScreen';
+import FormProgress from './FormProgress';
 
 const Stack = createNativeStackNavigator();
 
@@ -49,6 +50,13 @@ const NavigationPage = () => {
           <Stack.Screen
             name="ScanScreen"
             component={ScanScreen}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="FormProgress"
+            component={FormProgress}
             options={{
               headerShown: false,
             }}
