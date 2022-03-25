@@ -99,7 +99,9 @@ const Homepage = ({route, navigation}) => {
   };
 
   const selectFab = item => {
-    console.log('item fab', item);
+    if (item === 'fab_qr') {
+      navigation.navigate('ScanScreen');
+    }
   };
 
   const sortData = () => {

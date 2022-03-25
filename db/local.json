@@ -209,6 +209,33 @@
       "status": "Borrowed",
       "userId": 1,
       "id": 22
+    },
+    {
+      "titleBook": "Doraemon : Nobita & Kerajaan Robot",
+      "type": "Komik",
+      "author": "Fujiko F Fujio",
+      "cover": "https://www.bukukita.com/babacms/displaybuku/38826_f.jpg",
+      "status": "Borrowed",
+      "userId": 1,
+      "id": 23
+    },
+    {
+      "titleBook": "No Longer Human",
+      "type": "Novel",
+      "author": "Dazai Osamu",
+      "cover": "https://upload.wikimedia.org/wikipedia/id/1/18/No_Longer_Human_%28Osamu_Dazai_novel%29_cover.jpg",
+      "status": "Borrowed",
+      "userId": 1,
+      "id": 24
+    },
+    {
+      "titleBook": "Doraemon : Nobita & Kerajaan Robot",
+      "type": "Komik",
+      "author": "Fujiko F Fujio",
+      "cover": "https://www.bukukita.com/babacms/displaybuku/38826_f.jpg",
+      "status": "Borrowed",
+      "userId": 1,
+      "id": 25
     }
   ],
   "book": [

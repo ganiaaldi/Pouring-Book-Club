@@ -9,6 +9,7 @@ import {Provider} from 'react-redux';
 import {store} from '../redux';
 import DetailBook from './../pages/detail/DetailBook';
 import SignBook from './../pages/transaction/SignBook';
+import ScanScreen from './../component/ScanScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -41,6 +42,13 @@ const NavigationPage = () => {
           <Stack.Screen
             name="SignBook"
             component={SignBook}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="ScanScreen"
+            component={ScanScreen}
             options={{
               headerShown: false,
             }}
