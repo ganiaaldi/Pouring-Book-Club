@@ -93,15 +93,15 @@ const DetailBook = ({route, navigation}) => {
         </Text>
       </ScrollView>
       <View style={{alignItems: 'center'}}>
-        <CustomButton
+        {/* <CustomButton
           buttonText="Borrow Book"
           bgColor={colors.pink}
           textColors="white"
           border="white"
           onPress={borrowBook}
-        />
+        /> */}
         <CustomButton
-          buttonText="Test Page"
+          buttonText="Borrow Book"
           bgColor={colors.pink}
           textColors="white"
           border="white"

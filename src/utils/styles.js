@@ -18,7 +18,7 @@ export default StyleSheet.create({
     fontFamily: 'Roboto',
     fontWeight: 'bold',
     color: colors.grayblack,
-    fontSize: 18,
+    fontSize: 16,
   },
   titleBoldWhite: {
     fontFamily: 'Roboto',
@@ -46,5 +46,11 @@ export default StyleSheet.create({
     backgroundColor: 'white',
     width: 320,
     borderColor: colors.grayblack,
+  },
+  inputDisable: {
+    borderWidth: 1,
+    borderRadius: 20,
+    borderColor: colors.grayblack,
+    backgroundColor: '#d9d9d9',
   },
 });

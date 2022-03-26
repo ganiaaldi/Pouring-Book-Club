@@ -17,3 +17,7 @@ export const setPathImage = value => {
 export const clearFormPath = () => {
   return {type: 'CLEAR_FORM_PATH'};
 };
+
+export const setProfile = value => {
+  return {type: 'SET_PROFILE', inputValue: value};
+};

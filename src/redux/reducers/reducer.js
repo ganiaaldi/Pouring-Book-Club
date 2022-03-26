@@ -32,6 +32,20 @@ const transactionReducer = (state = initialTransaction, action) => {
   }
 };
 
+const initialProfile = {
+  id: 0,
+  fullname: '',
+};
+
+const profileReducer = (state = initialTransaction, action) => {
+  switch (action.type) {
+    case 'SET_PROFILE':
+      return action.inputValue;
+    default:
+      return state;
+  }
+};
+
 const initialPath = {
   location: {
     latitude: '',
@@ -68,6 +82,7 @@ const reducer = combineReducers({
   detailReducer,
   transactionReducer,
   formPath,
+  profileReducer,
 });
 
 export default reducer;

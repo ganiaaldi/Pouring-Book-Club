@@ -6,13 +6,17 @@ import {CustomButton} from '../../component';
 import {colors} from '../../utils/colors';
 import Axios from 'axios';
 import TabViewNav from '../../navigation/TabViewNav';
+import {useDispatch} from 'react-redux';
+import {setProfile} from '../../redux';
 
 const ProfilePage = ({route, navigation}) => {
   const [user, setUser] = useState({});
+  const dispatch = useDispatch();
 
   // Load data when the app starts
   useEffect(() => {
     getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getData = async () => {
@@ -20,6 +24,7 @@ const ProfilePage = ({route, navigation}) => {
     Axios.get(`http://192.168.42.192:8081/users/${savedID}`)
       .then(res => {
         console.log('res get profile', res.data);
+        dispatch(setProfile({id: savedID, fullname: res.data.fullname}));
         setUser(res.data);
       })
       .catch(err => console.log('err', err));
