@@ -37,7 +37,7 @@ const initialProfile = {
   fullname: '',
 };
 
-const profileReducer = (state = initialTransaction, action) => {
+const profileReducer = (state = initialProfile, action) => {
   switch (action.type) {
     case 'SET_PROFILE':
       return action.inputValue;
@@ -78,11 +78,32 @@ const formPath = (state = initialPath, action) => {
   }
 };
 
+const initialSurvey = {
+  repeatedBorrow: false,
+  reason: '',
+};
+
+const surveyReducer = (state = initialSurvey, action) => {
+  switch (action.type) {
+    case 'SET_SURVEY':
+      return {
+        ...(state = action.inputValue),
+      };
+    case 'CLEAR_SURVEY':
+      return {
+        ...(state = initialSurvey),
+      };
+    default:
+      return state;
+  }
+};
+
 const reducer = combineReducers({
   detailReducer,
   transactionReducer,
   formPath,
   profileReducer,
+  surveyReducer,
 });
 
 export default reducer;

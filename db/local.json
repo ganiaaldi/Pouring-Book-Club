@@ -37,6 +37,10 @@
       "cover": "https://cdnwpseller.gramedia.net/wp-content/uploads/2021/10/06103314/laut-bercerita.jpg",
       "status": "Borrowed",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 1
     },
     {
@@ -46,6 +50,10 @@
       "cover": "https://upload.wikimedia.org/wikipedia/id/1/18/No_Longer_Human_%28Osamu_Dazai_novel%29_cover.jpg",
       "status": "Finish",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 2
     },
     {
@@ -55,6 +63,10 @@
       "cover": "https://cdnwpseller.gramedia.net/wp-content/uploads/2021/10/06103314/laut-bercerita.jpg",
       "status": "Borrowed",
       "userId": 2,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 3
     },
     {
@@ -64,6 +76,10 @@
       "cover": "https://upload.wikimedia.org/wikipedia/id/1/18/No_Longer_Human_%28Osamu_Dazai_novel%29_cover.jpg",
       "status": "Finish",
       "userId": 3,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 4
     },
     {
@@ -73,6 +89,10 @@
       "cover": "https://images.tokopedia.net/img/cache/700/product-1/2019/10/4/72579307/72579307_7b3439ad-cb12-443b-a846-e19be790de37_674_977.jpg",
       "status": "Borrowed",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 5
     },
     {
@@ -82,6 +102,10 @@
       "cover": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421586212/goodnight-punpun-vol-2-9781421586212_lg.jpg",
       "status": "Borrowed",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 6
     },
     {
@@ -91,6 +115,10 @@
       "cover": "https://cdnwpseller.gramedia.net/wp-content/uploads/2021/10/06103314/laut-bercerita.jpg",
       "status": "Finish",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 7
     },
     {
@@ -100,6 +128,10 @@
       "cover": "https://cdnwpseller.gramedia.net/wp-content/uploads/2021/10/06103314/laut-bercerita.jpg",
       "status": "Finish",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 8
     },
     {
@@ -109,6 +141,10 @@
       "cover": "https://assets-a2.kompasiana.com/items/album/2015/10/29/sk2h-cover-5631cc511397734a07e4e7e8.jpg?t=o&v=780",
       "status": "Finish",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 9
     },
     {
@@ -118,6 +154,10 @@
       "cover": "https://cdnwpseller.gramedia.net/wp-content/uploads/2021/10/06103314/laut-bercerita.jpg",
       "status": "Finish",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 10
     },
     {
@@ -127,6 +167,10 @@
       "cover": "https://images.tokopedia.net/img/cache/700/product-1/2019/10/4/72579307/72579307_7b3439ad-cb12-443b-a846-e19be790de37_674_977.jpg",
       "status": "Finish",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 11
     },
     {
@@ -136,6 +180,10 @@
       "cover": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421586212/goodnight-punpun-vol-2-9781421586212_lg.jpg",
       "status": "Finish",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 12
     },
     {
@@ -145,6 +193,10 @@
       "cover": "https://www.bukukita.com/babacms/displaybuku/94347_f.jpg",
       "status": "Finish",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 13
     },
     {
@@ -154,6 +206,10 @@
       "cover": "https://upload.wikimedia.org/wikipedia/id/1/18/No_Longer_Human_%28Osamu_Dazai_novel%29_cover.jpg",
       "status": "Finish",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 14
     },
     {
@@ -163,6 +219,10 @@
       "cover": "https://assets-a2.kompasiana.com/items/album/2015/10/29/sk2h-cover-5631cc511397734a07e4e7e8.jpg?t=o&v=780",
       "status": "Finish",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 15
     },
     {
@@ -172,6 +232,10 @@
       "cover": "https://www.bukukita.com/babacms/displaybuku/61716_f.jpg",
       "status": "Finish",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 18
     },
     {
@@ -181,6 +245,10 @@
       "cover": "https://www.bukukita.com/babacms/displaybuku/38826_f.jpg",
       "status": "Borrowed",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 19
     },
     {
@@ -190,6 +258,10 @@
       "cover": "https://cdnwpseller.gramedia.net/wp-content/uploads/2021/10/06103314/laut-bercerita.jpg",
       "status": "Borrowed",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 20
     },
     {
@@ -199,6 +271,10 @@
       "cover": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421586212/goodnight-punpun-vol-2-9781421586212_lg.jpg",
       "status": "Borrowed",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 21
     },
     {
@@ -208,6 +284,10 @@
       "cover": "https://cdnwpseller.gramedia.net/wp-content/uploads/2021/10/06103314/laut-bercerita.jpg",
       "status": "Borrowed",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 22
     },
     {
@@ -217,6 +297,10 @@
       "cover": "https://www.bukukita.com/babacms/displaybuku/38826_f.jpg",
       "status": "Borrowed",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 23
     },
     {
@@ -226,6 +310,10 @@
       "cover": "https://upload.wikimedia.org/wikipedia/id/1/18/No_Longer_Human_%28Osamu_Dazai_novel%29_cover.jpg",
       "status": "Borrowed",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 24
     },
     {
@@ -235,7 +323,117 @@
       "cover": "https://www.bukukita.com/babacms/displaybuku/38826_f.jpg",
       "status": "Borrowed",
       "userId": 1,
+      "location": {
+        "latitude": "",
+        "longitude": ""
+      },
       "id": 25
+    },
+    {
+      "titleBook": "Doraemon : Nobita dan Kereta Api Ekspres",
+      "type": "Komik",
+      "author": "Fujiko F Fujio",
+      "cover": "https://www.bukukita.com/babacms/displaybuku/85604_f.jpg",
+      "status": "Borrowed",
+      "userId": "1",
+      "id": 26
+    },
+    {
+      "titleBook": "Doraemon : Nobita di Dunia Setan",
+      "type": "Komik",
+      "author": "Fujiko F Fujio",
+      "cover": "https://www.bukukita.com/babacms/displaybuku/68136_f.jpg",
+      "status": "Borrowed",
+      "userId": "1",
+      "id": 27
+    },
+    {
+      "titleBook": "Laut Bercerita",
+      "type": "Novel",
+      "author": "Leila S. Chudori",
+      "cover": "https://cdnwpseller.gramedia.net/wp-content/uploads/2021/10/06103314/laut-bercerita.jpg",
+      "status": "Borrowed",
+      "userId": "1",
+      "location": {},
+      "id": 28
+    },
+    {
+      "titleBook": "No Longer Human",
+      "type": "Novel",
+      "author": "Dazai Osamu",
+      "cover": "https://upload.wikimedia.org/wikipedia/id/1/18/No_Longer_Human_%28Osamu_Dazai_novel%29_cover.jpg",
+      "status": "Borrowed",
+      "userId": "1",
+      "location": {},
+      "id": 29
+    },
+    {
+      "titleBook": "Goodnight Punpun Vol. 1",
+      "type": "Komik",
+      "author": "Inio Asano",
+      "cover": "https://images.tokopedia.net/img/cache/700/product-1/2019/10/4/72579307/72579307_7b3439ad-cb12-443b-a846-e19be790de37_674_977.jpg",
+      "status": "Borrowed",
+      "userId": "1",
+      "location": {
+        "latitude": "-6.9026375",
+        "longitude": "107.5238348"
+      },
+      "id": 30
+    },
+    {
+      "titleBook": "Doraemon : Nobita dan Labirin Timah",
+      "type": "Komik",
+      "author": "Fujiko F Fujio",
+      "cover": "https://www.bukukita.com/babacms/displaybuku/61716_f.jpg",
+      "status": "Borrowed",
+      "userId": "1",
+      "location": {
+        "latitude": "-6.9026675",
+        "longitude": "107.5237683"
+      },
+      "id": 31
+    },
+    {
+      "titleBook": "Sepasang Kaos Kaki Hitam",
+      "type": "Novel",
+      "author": "Ariadi Ginting",
+      "cover": "https://assets-a2.kompasiana.com/items/album/2015/10/29/sk2h-cover-5631cc511397734a07e4e7e8.jpg?t=o&v=780",
+      "status": "Borrowed",
+      "userId": "1",
+      "location": {
+        "latitude": "-6.9026751",
+        "longitude": "107.5237918"
+      },
+      "date": "28/03/2022, 09:13:47",
+      "id": 32
+    },
+    {
+      "titleBook": "Goodnight Punpun Vol. 1",
+      "type": "Komik",
+      "author": "Inio Asano",
+      "cover": "https://images.tokopedia.net/img/cache/700/product-1/2019/10/4/72579307/72579307_7b3439ad-cb12-443b-a846-e19be790de37_674_977.jpg",
+      "status": "Borrowed",
+      "userId": "1",
+      "location": {
+        "latitude": "-6.9026915",
+        "longitude": "107.5237979"
+      },
+      "date": "28/03/2022, 10:42:55",
+      "id": 33
+    },
+    {
+      "titleBook": "Sepasang Kaos Kaki Hitam",
+      "type": "Novel",
+      "author": "Ariadi Ginting",
+      "cover": "https://assets-a2.kompasiana.com/items/album/2015/10/29/sk2h-cover-5631cc511397734a07e4e7e8.jpg?t=o&v=780",
+      "status": "Borrowed",
+      "userId": "1",
+      "location": {
+        "latitude": "-6.9027185",
+        "longitude": "107.5237283"
+      },
+      "date": "28/03/2022, 10:43:24",
+      "id": 34
     }
   ],
   "book": [
@@ -338,6 +536,38 @@
       "publisher": "PT. Elex Media Komputindo",
       "pages": 252,
       "id": 10
+    }
+  ],
+  "survey": [
+    {
+      "id": 1,
+      "tittleBook": "No Longer Human",
+      "idBook": 2,
+      "userId": 1,
+      "fullname": "Punya Aldi",
+      "date": "26/03/2022, 09:13:47",
+      "repeatedBorrow": false,
+      "reason": ""
+    },
+    {
+      "tittleBook": "Goodnight Punpun Vol. 1",
+      "idBook": 3,
+      "userId": "1",
+      "fullname": "Punya Aldi",
+      "date": "28/03/2022, 10:42:55",
+      "repeatedBorrow": true,
+      "reason": "Not yet finished reading",
+      "id": 2
+    },
+    {
+      "tittleBook": "Sepasang Kaos Kaki Hitam",
+      "idBook": 6,
+      "userId": "1",
+      "fullname": "Punya Aldi",
+      "date": "28/03/2022, 10:43:24",
+      "repeatedBorrow": false,
+      "reason": "",
+      "id": 3
     }
   ]
 }

@@ -1,25 +1,27 @@
 import {StyleSheet, Text, View, ScrollView, TextInput} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import styles from '../../utils/styles';
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import RadioGroup from 'react-native-radio-buttons-group';
 import {colors} from './../../utils/colors';
 import DropDownPicker from 'react-native-dropdown-picker';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import {setSurvey} from '../../redux';
 
 const SignForm = () => {
   const profileReducer = useSelector(state => state.profileReducer);
+  const dispatch = useDispatch();
   const [radioButtons, setRadioButtons] = useState(radioButtonsData);
   const [isYesRadio, setIsYesRadio] = useState(false);
   const display = isYesRadio ? 'flex' : 'none';
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
   const [items, setItems] = useState([
-    {value: '1', label: 'Not yet finished reading'},
-    {value: '2', label: 'For Research Purpose'},
-    {value: '3', label: 'Normal'},
-    {value: '4', label: 'Interested to re-reading'},
-    {value: '5', label: 'No special reason'},
+    {value: 'Not yet finished reading', label: 'Not yet finished reading'},
+    {value: 'For Research Purpose', label: 'For Research Purpose'},
+    {value: 'Normal', label: 'Normal'},
+    {value: 'Interested to re-reading', label: 'Interested to re-reading'},
+    {value: 'No special reason', label: 'No special reason'},
   ]);
 
   function onPressRadioButton(radioButtonsArray) {
@@ -29,9 +31,23 @@ const SignForm = () => {
       setIsYesRadio(true);
     } else {
       setIsYesRadio(false);
+      dispatch(
+        setSurvey({
+          repeatedBorrow: false,
+          reason: '',
+        }),
+      );
     }
-    console.log('cek radio', selectedRadio);
   }
+
+  const valueSurvey = item => {
+    dispatch(
+      setSurvey({
+        repeatedBorrow: isYesRadio,
+        reason: item,
+      }),
+    );
+  };
 
   useEffect(() => {
     console.log('profile reducer', profileReducer);
@@ -83,6 +99,9 @@ const SignForm = () => {
             setValue={setValue}
             setItems={setItems}
             listMode="SCROLLVIEW"
+            onChangeValue={item => {
+              valueSurvey(item);
+            }}
           />
         </View>
       </SafeAreaView>

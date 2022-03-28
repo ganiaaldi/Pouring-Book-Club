@@ -18,6 +18,14 @@ export const clearFormPath = () => {
   return {type: 'CLEAR_FORM_PATH'};
 };
 
+export const setSurvey = value => {
+  return {type: 'SET_SURVEY', inputValue: value};
+};
+
+export const clearSurvey = () => {
+  return {type: 'CLEAR_SURVEY'};
+};
+
 export const setProfile = value => {
   return {type: 'SET_PROFILE', inputValue: value};
 };

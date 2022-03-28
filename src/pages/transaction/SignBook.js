@@ -1,5 +1,5 @@
 import {ScrollView, Text, View} from 'react-native';
-import React, {useRef, useEffect} from 'react';
+import React, {useRef, useEffect, useImperativeHandle, forwardRef} from 'react';
 import SignPage from '../../component/SignPage';
 import styles from '../../utils/styles';
 import CustomButton from './../../component/Button';
@@ -9,14 +9,16 @@ import {useSelector, useDispatch} from 'react-redux';
 import Axios from 'axios';
 import {clearFormPath} from '../../redux';
 
-const SignBook = ({route, navigation}) => {
+const SignBook = (props, ref) => {
   const signRef = useRef();
   const locationRef = useRef();
   const formPath = useSelector(state => state.formPath);
   const dispatch = useDispatch();
+  const surveyReducer = useSelector(state => state.surveyReducer);
 
   useEffect(() => {
     console.log('cek sign formpath', formPath);
+    console.log('cek sign survey', surveyReducer);
     if (
       formPath.location.latitude === '' ||
       formPath.location.longitude === '' ||
@@ -30,6 +32,10 @@ const SignBook = ({route, navigation}) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [formPath]);
 
+  useImperativeHandle(ref, () => ({
+    submitSign,
+  }));
+
   const submitSign = async () => {
     signRef.current.handleOK();
     locationRef.current.submit();
@@ -37,7 +43,7 @@ const SignBook = ({route, navigation}) => {
 
   const saveSign = () => {
     console.log('formpath save', formPath);
-    dispatch(clearFormPath());
+    // dispatch(clearFormPath());
   };
 
   return (
@@ -53,7 +59,7 @@ const SignBook = ({route, navigation}) => {
         </Text>
         <SignPage ref={signRef} />
         <LocationPage ref={locationRef} />
-        <View style={{alignItems: 'center', marginTop: 20}}>
+        {/* <View style={{alignItems: 'center', marginTop: 20}}>
           <CustomButton
             buttonText="Complete Sign"
             bgColor={colors.pink}
@@ -68,10 +74,10 @@ const SignBook = ({route, navigation}) => {
             border="white"
             onPress={() => navigation.push('Dashboard')}
           />
-        </View>
+        </View> */}
       </ScrollView>
     </View>
   );
 };
 
-export default SignBook;
+export default forwardRef(SignBook);
