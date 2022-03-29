@@ -35,12 +35,8 @@
       "type": "Novel",
       "author": "Leila S. Chudori",
       "cover": "https://cdnwpseller.gramedia.net/wp-content/uploads/2021/10/06103314/laut-bercerita.jpg",
-      "status": "Borrowed",
+      "status": "Finish",
       "userId": 1,
-      "location": {
-        "latitude": "",
-        "longitude": ""
-      },
       "id": 1
     },
     {
@@ -448,6 +444,20 @@
       },
       "date": "29/03/2022, 09:07:43",
       "id": 35
+    },
+    {
+      "titleBook": "Goodnight Punpun Vol. 1",
+      "type": "Komik",
+      "author": "Inio Asano",
+      "cover": "https://images.tokopedia.net/img/cache/700/product-1/2019/10/4/72579307/72579307_7b3439ad-cb12-443b-a846-e19be790de37_674_977.jpg",
+      "status": "Borrowed",
+      "userId": "1",
+      "location": {
+        "latitude": "-6.9026945",
+        "longitude": "107.5237932"
+      },
+      "date": "29/03/2022, 10:14:37",
+      "id": 36
     }
   ],
   "book": [
@@ -592,6 +602,16 @@
       "repeatedBorrow": false,
       "reason": "",
       "id": 4
+    },
+    {
+      "tittleBook": "Goodnight Punpun Vol. 1",
+      "idBook": 3,
+      "userId": "1",
+      "fullname": "Punya Aldi",
+      "date": "29/03/2022, 10:14:37",
+      "repeatedBorrow": true,
+      "reason": "For Research Purpose",
+      "id": 5
     }
   ]
 }

@@ -2,7 +2,14 @@ import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import {colors} from '../utils/colors';
 
-const CustomButton = ({buttonText, onPress, bgColor, textColors, border}) => {
+const CustomButton = ({
+  buttonText,
+  onPress,
+  bgColor,
+  textColors,
+  border,
+  width,
+}) => {
   return (
     <View>
       <TouchableOpacity>
@@ -12,6 +19,7 @@ const CustomButton = ({buttonText, onPress, bgColor, textColors, border}) => {
             backgroundColor: bgColor,
             color: textColors,
             borderColor: border,
+            width: width,
           }}
           onPress={onPress}>
           {buttonText}

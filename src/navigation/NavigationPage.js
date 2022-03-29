@@ -11,6 +11,7 @@ import DetailBook from './../pages/detail/DetailBook';
 import SignBook from './../pages/transaction/SignBook';
 import ScanScreen from './../component/ScanScreen';
 import FormProgress from './FormProgress';
+import ExpandableList from '../component/ExpandableList';
 
 const Stack = createNativeStackNavigator();
 
@@ -57,6 +58,13 @@ const NavigationPage = () => {
           <Stack.Screen
             name="FormProgress"
             component={FormProgress}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="ExpandableList"
+            component={ExpandableList}
             options={{
               headerShown: false,
             }}

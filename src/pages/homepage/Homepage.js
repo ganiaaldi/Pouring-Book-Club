@@ -103,6 +103,9 @@ const Homepage = ({route, navigation}) => {
     if (item === 'fab_qr') {
       navigation.navigate('ScanScreen');
     }
+    if (item === 'fab_profile') {
+      navigation.navigate('ExpandableList');
+    }
   };
 
   const sortData = () => {
