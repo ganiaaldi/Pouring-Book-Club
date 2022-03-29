@@ -434,6 +434,20 @@
       },
       "date": "28/03/2022, 10:43:24",
       "id": 34
+    },
+    {
+      "titleBook": "Laut Bercerita",
+      "type": "Novel",
+      "author": "Leila S. Chudori",
+      "cover": "https://cdnwpseller.gramedia.net/wp-content/uploads/2021/10/06103314/laut-bercerita.jpg",
+      "status": "Borrowed",
+      "userId": "1",
+      "location": {
+        "latitude": "-6.9026608",
+        "longitude": "107.5238123"
+      },
+      "date": "29/03/2022, 09:07:43",
+      "id": 35
     }
   ],
   "book": [
@@ -568,6 +582,16 @@
       "repeatedBorrow": false,
       "reason": "",
       "id": 3
+    },
+    {
+      "tittleBook": "Laut Bercerita",
+      "idBook": 1,
+      "userId": "1",
+      "fullname": "Punya Aldi",
+      "date": "29/03/2022, 09:07:43",
+      "repeatedBorrow": false,
+      "reason": "",
+      "id": 4
     }
   ]
 }

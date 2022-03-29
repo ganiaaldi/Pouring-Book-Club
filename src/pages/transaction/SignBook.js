@@ -2,18 +2,13 @@ import {ScrollView, Text, View} from 'react-native';
 import React, {useRef, useEffect, useImperativeHandle, forwardRef} from 'react';
 import SignPage from '../../component/SignPage';
 import styles from '../../utils/styles';
-import CustomButton from './../../component/Button';
-import {colors} from './../../utils/colors';
 import LocationPage from './../../component/LocationPage';
 import {useSelector, useDispatch} from 'react-redux';
-import Axios from 'axios';
-import {clearFormPath} from '../../redux';
 
 const SignBook = (props, ref) => {
   const signRef = useRef();
   const locationRef = useRef();
   const formPath = useSelector(state => state.formPath);
-  const dispatch = useDispatch();
   const surveyReducer = useSelector(state => state.surveyReducer);
 
   useEffect(() => {

@@ -18,7 +18,8 @@ import {
 
 import RNSketchCanvas from '@terrylinla/react-native-sketch-canvas';
 import {useSelector, useDispatch} from 'react-redux';
-import {setPathImage} from '../redux';
+import {setPathImage, setCount} from '../redux';
+import {clearCount} from './../redux/actions/actions';
 
 const SignPage = (props, ref) => {
   const formPath = useSelector(state => state.formPath);
@@ -32,6 +33,7 @@ const SignPage = (props, ref) => {
 
   const clear = async () => {
     await reff.current.clear();
+    dispatch(clearCount());
   };
 
   const handleOK = async () => {
@@ -103,6 +105,11 @@ const SignPage = (props, ref) => {
           }}
           onPathsChange={pathsCount => {
             console.log('pathsCount', pathsCount);
+          }}
+          onStrokeEnd={pathsCount => {
+            // dispatch(setCount(pathsCount));
+            dispatch(setCount(true));
+            console.log('stroke end', pathsCount);
           }}
           /* Function Button in canvas
           closeComponent={

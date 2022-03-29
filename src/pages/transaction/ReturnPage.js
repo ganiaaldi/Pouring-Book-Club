@@ -6,6 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {colors} from '../../utils/colors';
 import {useSelector, useDispatch} from 'react-redux';
 import {setReturnBook} from '../../redux';
+import {BASE_URL} from '../../utils/api';
 
 const ReturnPage = () => {
   const [transaction, setTransaction] = useState([]);
@@ -35,7 +36,7 @@ const ReturnPage = () => {
       {
         text: 'Yes',
         onPress: () => {
-          Axios.delete(`http://192.168.42.192:8081/transaction/${item.id}`)
+          Axios.delete(`${BASE_URL}/transaction/${item.id}`)
             .then(res => {
               console.log('res', res);
               dispatch(

@@ -19,6 +19,7 @@ import SelectedChips from './../../component/SelectedChips';
 import {searchIcon} from '../../assets';
 import fabList from './../../component/FloatingActionButton';
 import {FloatingAction} from 'react-native-floating-action';
+import {BASE_URL} from './../../utils/api';
 
 const Homepage = ({route, navigation}) => {
   const [search, setSearch] = useState('');
@@ -34,7 +35,7 @@ const Homepage = ({route, navigation}) => {
   }, []);
 
   const getData = async () => {
-    Axios.get('http://192.168.42.192:8081/book')
+    Axios.get(`${BASE_URL}/book`)
       .then(res => {
         console.log('res get list book', res.data);
         setBook(res.data);

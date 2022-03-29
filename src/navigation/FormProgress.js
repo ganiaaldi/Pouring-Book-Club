@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import React, {Component, useEffect, useRef} from 'react';
+import React, {Component, useEffect, useRef, useState} from 'react';
 import {View, Text} from 'react-native';
 
 import {ProgressSteps, ProgressStep} from 'react-native-progress-steps';
@@ -16,15 +16,16 @@ const FormProgress = ({route, navigation}) => {
   const detailReducer = useSelector(state => state.detailReducer);
   const profileReducer = useSelector(state => state.profileReducer);
   const surveyReducer = useSelector(state => state.surveyReducer);
+  const signReducer = useSelector(state => state.signReducer);
   const dispatch = useDispatch();
   const date = new Date().toLocaleString();
-  // static navigationOptions = {
-  //   header: null,
-  // };
+  const [isSignActive, setIsSignActive] = useState(true);
 
   useEffect(() => {
-    console.log('cek detail reducer', detailReducer);
-    console.log('cek profile reducer', profileReducer);
+    // console.log('cek detail reducer', detailReducer);
+    // console.log('cek profile reducer', profileReducer);
+    // console.log('cek survey reducer', surveyReducer);
+    // console.log('cek path reducer', signReducer);
     if (
       formPath.location.latitude !== '' &&
       formPath.location.longitude !== '' &&
@@ -33,8 +34,15 @@ const FormProgress = ({route, navigation}) => {
       fillSurvey();
       borrowBook();
     }
+    if (signReducer.pathCounts) {
+      console.log('pathCount false');
+      setIsSignActive(false);
+    } else {
+      console.log('pathCount true');
+      setIsSignActive(true);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [formPath, detailReducer, profileReducer]);
+  }, [formPath, detailReducer, profileReducer, surveyReducer, signReducer]);
 
   const defaultScrollViewProps = {
     keyboardShouldPersistTaps: 'handled',
@@ -135,6 +143,7 @@ const FormProgress = ({route, navigation}) => {
           nextBtnTextStyle={{color: 'white', padding: 10, fontSize: 14}}
           onPrevious={onPrevStep}
           onSubmit={onSubmitSteps}
+          nextBtnDisabled={isSignActive}
           scrollViewProps={defaultScrollViewProps}>
           <SignBook ref={signRef} />
         </ProgressStep>

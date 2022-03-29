@@ -4,6 +4,7 @@ import TabViewNav from '../../navigation/TabViewNav';
 import Axios from 'axios';
 import ItemTransaction from '../transaction/ItemTransaction';
 import {colors} from '../../utils/colors';
+import {BASE_URL} from './../../utils/api';
 
 const Memberlist = () => {
   const [transaction, setTransaction] = useState([]);
@@ -13,7 +14,7 @@ const Memberlist = () => {
   }, []);
 
   const getData = async () => {
-    Axios.get('http://192.168.42.192:8081/users')
+    Axios.get(`${BASE_URL}/users`)
       .then(res => {
         console.log('res get member', res.data);
         setTransaction(res.data);

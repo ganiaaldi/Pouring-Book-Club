@@ -8,6 +8,7 @@ import Axios from 'axios';
 import TabViewNav from '../../navigation/TabViewNav';
 import {useDispatch} from 'react-redux';
 import {setProfile} from '../../redux';
+import {BASE_URL} from './../../utils/api';
 
 const ProfilePage = ({route, navigation}) => {
   const [user, setUser] = useState({});
@@ -21,7 +22,7 @@ const ProfilePage = ({route, navigation}) => {
 
   const getData = async () => {
     const savedID = await AsyncStorage.getItem('@idAnggota');
-    Axios.get(`http://192.168.42.192:8081/users/${savedID}`)
+    Axios.get(`${BASE_URL}/users/${savedID}`)
       .then(res => {
         console.log('res get profile', res.data);
         dispatch(setProfile({id: savedID, fullname: res.data.fullname}));

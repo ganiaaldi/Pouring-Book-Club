@@ -6,6 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {colors} from '../../utils/colors';
 import {useSelector, useDispatch} from 'react-redux';
 import {setReturnBook} from '../../redux';
+import {BASE_URL} from './../../utils/api';
 
 const BorrowPage = () => {
   const [transaction, setTransaction] = useState([]);
@@ -18,9 +19,7 @@ const BorrowPage = () => {
 
   const getData = async () => {
     const savedID = await AsyncStorage.getItem('@idAnggota');
-    Axios.get(
-      `http://192.168.42.192:8081/transaction?userId=${savedID}&status=Borrowed`,
-    )
+    Axios.get(`${BASE_URL}/transaction?userId=${savedID}&status=Borrowed`)
       .then(res => {
         console.log('res borrowed book', res.data);
         setTransaction(res.data);
@@ -36,7 +35,7 @@ const BorrowPage = () => {
       {
         text: 'Yes',
         onPress: () => {
-          Axios.put(`http://192.168.42.192:8081/transaction/${item.id}`, {
+          Axios.put(`${BASE_URL}/transaction/${item.id}`, {
             titleBook: item.titleBook,
             type: item.type,
             author: item.author,

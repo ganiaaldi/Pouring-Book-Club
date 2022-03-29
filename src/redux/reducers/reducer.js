@@ -98,12 +98,32 @@ const surveyReducer = (state = initialSurvey, action) => {
   }
 };
 
+const initialSign = {
+  pathCounts: false,
+};
+
+const signReducer = (state = initialSign, action) => {
+  switch (action.type) {
+    case 'SET_COUNT':
+      return {
+        pathCounts: action.inputValue,
+      };
+    case 'CLEAR_COUNT':
+      return {
+        ...(state = initialSign),
+      };
+    default:
+      return state;
+  }
+};
+
 const reducer = combineReducers({
   detailReducer,
   transactionReducer,
   formPath,
   profileReducer,
   surveyReducer,
+  signReducer,
 });
 
 export default reducer;

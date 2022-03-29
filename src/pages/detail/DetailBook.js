@@ -1,11 +1,9 @@
 import {ScrollView, Text, View, Image} from 'react-native';
 import React, {useEffect} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 import styles from '../../utils/styles';
 import {CustomButton} from '../../component';
 import {colors} from './../../utils/colors';
-import Axios from 'axios';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const DetailBook = ({route, navigation}) => {
   const detailReducer = useSelector(state => state.detailReducer);
@@ -13,25 +11,6 @@ const DetailBook = ({route, navigation}) => {
   useEffect(() => {
     console.log('detail data', detailReducer);
   }, [detailReducer]);
-
-  const borrowBook = async () => {
-    const savedID = await AsyncStorage.getItem('@idAnggota');
-    console.log('saved ID', savedID);
-    Axios.post('http://192.168.42.192:8081/transaction', {
-      titleBook: detailReducer.titleBook,
-      type: detailReducer.type,
-      author: detailReducer.author,
-      cover: detailReducer.cover,
-      status: 'Borrowed',
-      userId: parseInt(savedID),
-    })
-      .then(res => {
-        console.log('res', res);
-        // navigation.push('Dashboard');
-        navigation.navigate('SignBook');
-      })
-      .catch(err => console.log('err', err));
-  };
 
   return (
     <View style={{flex: 1, padding: 10}}>

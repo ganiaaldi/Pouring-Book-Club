@@ -6,6 +6,7 @@ import {
   Image,
   ScrollView,
   Keyboard,
+  Alert,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import {CustomButton} from '../../component';
@@ -15,16 +16,23 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import stylesReus from '../../utils/styles';
 
 const LoginPage = ({route, navigation}) => {
-  const [idAnggota, setIdAnggota] = useState();
+  const [idAnggota, setIdAnggota] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPasswword] = useState('');
 
   // Create or Update nickname
   const saveID = async () => {
-    try {
-      console.log('cek idAnggota', idAnggota);
-      await AsyncStorage.setItem('@idAnggota', idAnggota);
-      navigation.navigate('Dashboard');
-    } catch (err) {
-      console.log(err);
+    console.log('cek login', username);
+    if (idAnggota === '' || username === '' || password === '') {
+      Alert.alert('Warning', 'Fill all form first!');
+    } else {
+      try {
+        console.log('cek idAnggota', idAnggota);
+        await AsyncStorage.setItem('@idAnggota', idAnggota);
+        navigation.navigate('Dashboard');
+      } catch (err) {
+        console.log(err);
+      }
     }
     Keyboard.dismiss();
   };
@@ -49,12 +57,24 @@ const LoginPage = ({route, navigation}) => {
             onChangeText={value => {
               setIdAnggota(value);
             }}
+            value={idAnggota}
           />
-          <TextInput placeholder="Username" style={stylesReus.input} />
+          <TextInput
+            placeholder="Username"
+            style={stylesReus.input}
+            onChangeText={value => {
+              setUsername(value);
+            }}
+            value={username}
+          />
           <TextInput
             placeholder="Password"
             style={stylesReus.input}
             secureTextEntry={true}
+            onChangeText={value => {
+              setPasswword(value);
+            }}
+            value={password}
           />
         </View>
         <CustomButton

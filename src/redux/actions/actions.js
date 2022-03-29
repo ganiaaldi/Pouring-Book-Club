@@ -26,6 +26,14 @@ export const clearSurvey = () => {
   return {type: 'CLEAR_SURVEY'};
 };
 
+export const setCount = value => {
+  return {type: 'SET_COUNT', inputValue: value};
+};
+
+export const clearCount = () => {
+  return {type: 'CLEAR_COUNT'};
+};
+
 export const setProfile = value => {
   return {type: 'SET_PROFILE', inputValue: value};
 };
