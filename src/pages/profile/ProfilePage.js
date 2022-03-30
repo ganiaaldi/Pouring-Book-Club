@@ -9,6 +9,7 @@ import TabViewNav from '../../navigation/TabViewNav';
 import {useDispatch} from 'react-redux';
 import {setProfile} from '../../redux';
 import {BASE_URL} from './../../utils/api';
+import Logo from '../../assets/icons/svg-logo.svg';
 
 const ProfilePage = ({route, navigation}) => {
   const [user, setUser] = useState({});
@@ -47,7 +48,7 @@ const ProfilePage = ({route, navigation}) => {
           alignContent: 'center',
           justifyContent: 'center',
           alignItems: 'center',
-          marginTop: 30,
+          marginTop: 10,
           marginBottom: 20,
         }}>
         <Image
@@ -61,23 +62,26 @@ const ProfilePage = ({route, navigation}) => {
             borderColor: colors.grayblack,
           }}
         />
-        <Text style={{...styles.titleBoldDark, marginTop: 20}}>
+        <Text style={{...styles.titleBoldDark, marginTop: 10}}>
           {user.fullname}
         </Text>
-        <CustomButton
+        {/* <CustomButton
           buttonText="Edit Users"
           bgColor={colors.pink}
           textColors="white"
           // onPress={() => navigation.navigate('Dashboard')}
           // onPress={saveID}
-        />
-        <CustomButton
-          buttonText="Logout"
-          textColors={colors.pink}
-          bgColor="white"
-          // onPress={() => navigation.navigate('Dashboard')}
-          onPress={removeNickname}
-        />
+        /> */}
+        <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <Logo width={120} height={40} />
+          <CustomButton
+            buttonText="Logout"
+            textColors={colors.pink}
+            bgColor="white"
+            // onPress={() => navigation.navigate('Dashboard')}
+            onPress={removeNickname}
+          />
+        </View>
       </View>
       <TabViewNav />
     </View>
