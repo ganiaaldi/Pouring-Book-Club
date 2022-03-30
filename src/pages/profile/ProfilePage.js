@@ -9,7 +9,8 @@ import TabViewNav from '../../navigation/TabViewNav';
 import {useDispatch} from 'react-redux';
 import {setProfile} from '../../redux';
 import {BASE_URL} from './../../utils/api';
-import Logo from '../../assets/icons/svg-logo.svg';
+
+import ModalDialog from '../../component/ModalDialog';
 
 const ProfilePage = ({route, navigation}) => {
   const [user, setUser] = useState({});
@@ -73,7 +74,7 @@ const ProfilePage = ({route, navigation}) => {
           // onPress={saveID}
         /> */}
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
-          <Logo width={120} height={40} />
+          <ModalDialog title="Success" textYes="Yes" textNo="No" />
           <CustomButton
             buttonText="Logout"
             textColors={colors.pink}

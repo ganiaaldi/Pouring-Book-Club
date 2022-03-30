@@ -14,6 +14,8 @@ import {colors} from '../../utils/colors';
 import {icon} from '../../assets';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import stylesReus from '../../utils/styles';
+import {InputOutline, InputStandard} from 'react-native-input-outline';
+import OutlinedTextInput from '../../component/OutlinedTextInput';
 
 const LoginPage = ({route, navigation}) => {
   const [idAnggota, setIdAnggota] = useState('');
@@ -50,16 +52,17 @@ const LoginPage = ({route, navigation}) => {
           Login Member
         </Text>
         <View style={{alignItems: 'center'}}>
-          <TextInput
+          <InputOutline
             placeholder="No. Anggota"
-            style={stylesReus.input}
+            style={{marginBottom: 20}}
+            roundness={20}
             keyboardType="numeric"
             onChangeText={value => {
               setIdAnggota(value);
             }}
             value={idAnggota}
           />
-          <TextInput
+          <InputOutline
             placeholder="Username"
             style={stylesReus.input}
             onChangeText={value => {
@@ -67,14 +70,58 @@ const LoginPage = ({route, navigation}) => {
             }}
             value={username}
           />
-          <TextInput
-            placeholder="Password"
-            style={stylesReus.input}
-            secureTextEntry={true}
+          {/* <View style={{position: 'relative'}}>
+            <TextInput
+              placeholder="Password"
+              style={{...stylesReus.input, position: 'relative'}}
+              secureTextEntry={true}
+              onChangeText={value => {
+                setPasswword(value);
+              }}
+              value={password}
+            />
+            <View
+              style={{
+                flexDirection: 'column',
+                width: textMeasure.width,
+                position: 'absolute',
+                height: textMeasure.height,
+                top: -8,
+                left: 12,
+              }}>
+              <View
+                style={{
+                  height: '50%',
+                  width: '100%',
+                  backgroundColor: colors.pink,
+                }}
+              />
+              <View
+                style={{
+                  height: '50%',
+                  width: '100%',
+                  backgroundColor: colors.white,
+                }}
+              />
+              <View
+                onLayout={onLayout}
+                style={{
+                  position: 'absolute',
+                  left: 5,
+                }}>
+                <Text style={{fontSize: 12}}>
+                  Text Activity Report <Text style={{color: 'red'}}>*</Text>
+                </Text>
+              </View>
+            </View>
+          </View> */}
+          <OutlinedTextInput
+            value={password}
+            hintOutline={'Password'}
+            placeholderHint={'Enter Password'}
             onChangeText={value => {
               setPasswword(value);
             }}
-            value={password}
           />
         </View>
         <CustomButton

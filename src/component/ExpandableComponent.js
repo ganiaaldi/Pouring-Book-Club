@@ -102,8 +102,10 @@ const styles = StyleSheet.create({
   content: {
     paddingLeft: 10,
     paddingRight: 10,
-    backgroundColor: colors.lightbrown,
+    backgroundColor: colors.red,
     paddingBottom: 20,
+    borderBottomRightRadius: 20,
+    borderBottomLeftRadius: 20,
     alignItems: 'flex-end',
   },
   avatar: {
@@ -124,6 +126,8 @@ const styles = StyleSheet.create({
     backgroundColor: colors.darkpink,
     borderColor: colors.grayblack,
     padding: 20,
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
   },
   descContainer: {
     marginLeft: 10,
