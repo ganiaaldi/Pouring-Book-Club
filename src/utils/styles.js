@@ -41,7 +41,7 @@ export default StyleSheet.create({
   input: {
     borderWidth: 1,
     marginBottom: 10,
-    borderRadius: 20,
+    borderRadius: 10,
     paddingHorizontal: 15,
     backgroundColor: 'white',
     width: 320,

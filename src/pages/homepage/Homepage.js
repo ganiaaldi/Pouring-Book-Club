@@ -106,6 +106,9 @@ const Homepage = ({route, navigation}) => {
     if (item === 'fab_profile') {
       navigation.navigate('ExpandableList');
     }
+    if (item === 'fab_member') {
+      navigation.navigate('FormInput');
+    }
   };
 
   const sortData = () => {

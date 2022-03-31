@@ -5,6 +5,7 @@
       "password": "1234",
       "fullname": "Punya Aldi",
       "path": "https://i.pinimg.com/736x/94/9e/ed/949eed75d15f30d00b1cfe05fc7059da.jpg",
+      "telephone" : "+6289523178818",
       "id": 1
     },
     {
@@ -12,6 +13,7 @@
       "password": "1234",
       "fullname": "Diona Putri",
       "path": "https://png.pngtree.com/png-vector/20190307/ourlarge/pngtree-vector-flower-icon-png-image_780470.jpg",
+      "telephone" : "+6289523178818",
       "id": 2
     },
     {
@@ -19,6 +21,7 @@
       "password": "1234",
       "fullname": "Bayu Purnama",
       "path": "https://1tb.favim.com/preview/8/814/8144/81440/8144021.jpg",
+      "telephone" : "+6289523178818",
       "id": 3
     },
     {
@@ -26,6 +29,7 @@
       "password": "1234",
       "fullname": "Rudi Bonaparte",
       "path": "https://iconape.com/wp-content/png_logo_vector/bird.png",
+      "telephone" : "+6289523178818",
       "id": 4
     }
   ],

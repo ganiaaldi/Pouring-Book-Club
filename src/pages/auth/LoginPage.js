@@ -70,16 +70,17 @@ const LoginPage = ({route, navigation}) => {
             }}
             value={username}
           />
+          <TextInput
+            placeholder="Password"
+            style={{...stylesReus.input, position: 'relative'}}
+            secureTextEntry={true}
+            onChangeText={value => {
+              setPasswword(value);
+            }}
+            value={password}
+          />
           {/* <View style={{position: 'relative'}}>
-            <TextInput
-              placeholder="Password"
-              style={{...stylesReus.input, position: 'relative'}}
-              secureTextEntry={true}
-              onChangeText={value => {
-                setPasswword(value);
-              }}
-              value={password}
-            />
+
             <View
               style={{
                 flexDirection: 'column',
@@ -115,14 +116,12 @@ const LoginPage = ({route, navigation}) => {
               </View>
             </View>
           </View> */}
-          <OutlinedTextInput
-            value={password}
+          {/* <OutlinedTextInput
             hintOutline={'Password'}
-            placeholderHint={'Enter Password'}
-            onChangeText={value => {
-              setPasswword(value);
-            }}
-          />
+            placeholderHint={'Enter  Password'}
+            onChangeText={value => {}}
+            topColor={'white'}
+          /> */}
         </View>
         <CustomButton
           buttonText="Login"

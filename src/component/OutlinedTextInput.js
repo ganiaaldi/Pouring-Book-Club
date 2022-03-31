@@ -8,20 +8,24 @@ export const OutlinedTextInput = ({
   onChangeText,
   value,
   hintOutline,
+  topColor,
+  bottomColor,
 }) => {
   const [textMeasure, setTextMeasure] = useState({});
+  const [topInput, setTopInput] = useState(0);
 
   const onLayout = event => {
     const {x, y, height, width} = event.nativeEvent.layout;
-    console.log(x, y, height, width);
     setTextMeasure({x, y, height, width});
+    setTopInput(height / -2 + 2);
   };
+
   return (
-    <View style={{position: 'relative'}}>
+    <View style={{position: 'relative', marginBottom: 15}}>
       <TextInput
         placeholder={placeholderHint}
         style={{...stylesReus.input, position: 'relative'}}
-        secureTextEntry={true}
+        // secureTextEntry={true}
         onChangeText={onChangeText}
         value={value}
       />
@@ -31,21 +35,21 @@ export const OutlinedTextInput = ({
           width: textMeasure.width,
           position: 'absolute',
           height: textMeasure.height,
-          top: -8,
-          left: 12,
+          top: topInput,
+          left: 8,
         }}>
         <View
           style={{
-            height: '50%',
-            width: '100%',
-            backgroundColor: colors.pink,
+            height: textMeasure.height / 2,
+            width: textMeasure.width + 10,
+            backgroundColor: topColor,
           }}
         />
         <View
           style={{
-            height: '50%',
-            width: '100%',
-            backgroundColor: colors.white,
+            height: textMeasure.height / 2,
+            width: textMeasure.width + 10,
+            backgroundColor: bottomColor,
           }}
         />
         <View

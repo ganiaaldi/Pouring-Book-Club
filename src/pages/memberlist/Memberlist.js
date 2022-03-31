@@ -1,10 +1,12 @@
-import {StyleSheet, Text, View, ScrollView} from 'react-native';
+import {StyleSheet, Text, View, ScrollView, Image} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import TabViewNav from '../../navigation/TabViewNav';
 import Axios from 'axios';
 import ItemTransaction from '../transaction/ItemTransaction';
 import {colors} from '../../utils/colors';
 import {BASE_URL} from './../../utils/api';
+import Member from './Member';
+import {sendWhatsApp} from './../../utils/whatsapp';
 
 const Memberlist = () => {
   const [transaction, setTransaction] = useState([]);
@@ -27,12 +29,13 @@ const Memberlist = () => {
         <View style={{paddingHorizontal: 10}}>
           {transaction.map(transaction => {
             return (
-              <ItemTransaction
+              <Member
                 key={transaction.id}
                 tittlebook={transaction.id}
                 author={transaction.fullname}
                 path={transaction.path}
                 bgColor={colors.red}
+                onPress={() => sendWhatsApp(transaction.telephone)}
               />
             );
           })}
