@@ -21,5 +21,6 @@ Feature use :
 17. Radio Button & Spinner(Dropdown)
 18. Expandable List
 19. SVG Transformation
-20. Custom Modal
+20. Custom Modal/Alert Dialog
 21. Custom Outline Textinput
+22. Direct Whatsapp

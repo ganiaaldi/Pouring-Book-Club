@@ -12,12 +12,13 @@ export const OutlinedTextInput = ({
   bottomColor,
 }) => {
   const [textMeasure, setTextMeasure] = useState({});
-  const [topInput, setTopInput] = useState(0);
 
   const onLayout = event => {
     const {x, y, height, width} = event.nativeEvent.layout;
-    setTextMeasure({x, y, height, width});
-    setTopInput(height / -2 + 2);
+    const heightSpace = height / 2;
+    const widthSpace = width + 10;
+    const topInput = height / -2 + 2;
+    setTextMeasure({x, y, height, width, heightSpace, widthSpace, topInput});
   };
 
   return (
@@ -35,20 +36,20 @@ export const OutlinedTextInput = ({
           width: textMeasure.width,
           position: 'absolute',
           height: textMeasure.height,
-          top: topInput,
+          top: textMeasure.topInput,
           left: 8,
         }}>
         <View
           style={{
-            height: textMeasure.height / 2,
-            width: textMeasure.width + 10,
+            height: textMeasure.heightSpace,
+            width: textMeasure.widthSpace,
             backgroundColor: topColor,
           }}
         />
         <View
           style={{
-            height: textMeasure.height / 2,
-            width: textMeasure.width + 10,
+            height: textMeasure.heightSpace,
+            width: textMeasure.widthSpace,
             backgroundColor: bottomColor,
           }}
         />
